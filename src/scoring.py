@@ -17,10 +17,10 @@ def path_check(path_name: str) -> bool:
 def calc_climate_score(df_emissions: pd.DataFrame) -> float:
     """
     inputs:
-        dataframe with aggregate emissions for last 100 years
-        carbon dioxide
-        methane
-        nitrous oxide
+        dataframe with aggregate emissions for last 100 years (in tons)
+        CO2 carbon dioxide
+        CH4 methane
+        N2O nitrous oxide
     output:
         climate risk score
     """
@@ -33,7 +33,7 @@ def parse_culm_gas_emissions() -> pd.DataFrame:
     """
     col_headers = ["Year", "CO2‚RF (W/m^2)", "CO2 kWh", "CO2 Aggregate warming", \
                 "CH4‚RF (W/m^2)", "CH4 kWh", "CH4 Aggregate warming", \
-                "NO2‚RF (W/m^2)", "NO2 kWh", "NO2 Aggregate warming"]
+                "N2O‚RF (W/m^2)", "N2O kWh", "N2O Aggregate warming"]
     """
     data_historical = os.path.join(ROOT,
         "resources/Radiative_Efficiency_Over_100_Y.csv")
